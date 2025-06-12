@@ -1,5 +1,4 @@
 import { ServiceCard } from "@/components/ServiceCard";
-import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
@@ -54,47 +53,23 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Header Section */}
-      <section className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Наши услуги
-            </h1>
-            <p className="text-xl text-slate-200 leading-relaxed">
-              Мы предлагаем полный спектр юридических услуг для физических лиц и
-              бизнеса. Профессиональный подход и многолетний опыт гарантируют
-              качественное решение ваших правовых вопросов.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-slate-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold text-center text-slate-800 mb-12">
+          Услуги
+        </h1>
 
-      {/* Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg font-medium"
-            >
-              Все услуги
-            </Button>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 };
